@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  db:
+    image: mysql:5.5.40
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_NAME: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - example_data:/var/lib/mysql
+volumes:
+  example_data:
